@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Typography defaults */
+@layer base {
+  body {
+    @apply text-[17px] sm:text-[18px] leading-7;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+  p, li, a, span, small, blockquote {
+    @apply font-body;
+  }
+  /* Ensure subtext (paragraphs and lists) is comfortably readable project-wide */
+  p, li {
+    @apply text-[17px] sm:text-[18px];
+  }
+  em.subtext, .subtext-italic {
+    @apply italic font-body;
+  }
+}
+
+:root {
+  --background: 255 255 255;
+  --foreground: 17 24 39;
+}
+
+html, body, :root {
+  height: 100%;
+}
+
+body {
+  color: rgb(var(--foreground));
+  background: rgb(var(--background));
+  overscroll-behavior: contain;
+}
+
+/* Overscroll background color */
+html {
+  background-color: #191919;
+}
+
