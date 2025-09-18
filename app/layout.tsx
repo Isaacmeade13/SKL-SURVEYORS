@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import Nav from '@/components/Nav';
+import CookieConsent from '@/components/CookieConsent';
 import { Playfair_Display, Cormorant_Garamond } from 'next/font/google';
 
 const playfair = Playfair_Display({
@@ -64,6 +65,20 @@ export const metadata: Metadata = {
   verification: {
     google: 'your-google-verification-code',
   },
+  icons: {
+    icon: [
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon.ico', sizes: 'any' }
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }
+    ],
+    other: [
+      { url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' }
+    ]
+  },
 };
 
 export default function RootLayout({
@@ -76,6 +91,7 @@ export default function RootLayout({
       <body className={`${playfair.variable} ${cormorant.variable} min-h-dvh antialiased bg-white text-gray-900 font-body`}>
         <Nav />
         {children}
+        <CookieConsent />
       </body>
     </html>
   );

@@ -43,7 +43,7 @@ export default function Footer() {
                   <p className="text-white text-base sm:text-lg leading-7">Mon - Fri: 8 AM - 6 PM</p>
                 </div>
                 <div className="pt-2 space-y-2">
-                  <Link href="/privacy-policy" className="block text-white text-base sm:text-lg leading-7 underline underline-offset-4 hover:text-gray-300">Privacy policy</Link>
+                  <Link href="/privacy" className="block text-white text-base sm:text-lg leading-7 underline underline-offset-4 hover:text-gray-300">Privacy policy</Link>
                   <Link href="/terms-and-conditions" className="block text-white text-base sm:text-lg leading-7 underline underline-offset-4 hover:text-gray-300">Terms and conditions</Link>
                 </div>
               </div>
@@ -149,7 +149,7 @@ export default function Footer() {
                 <p className="mt-1 text-white text-base sm:text-lg leading-7">Mon - Fri: 8 AM - 6 PM</p>
               </div>
               <div className="pt-3 space-y-2">
-                <Link href="/privacy-policy" className="underline underline-offset-4 hover:text-white text-base sm:text-lg leading-7">Privacy policy</Link>
+                <Link href="/privacy" className="underline underline-offset-4 hover:text-white text-base sm:text-lg leading-7">Privacy policy</Link>
                 <div>
                   <Link href="/terms-and-conditions" className="underline underline-offset-4 hover:text-white text-base sm:text-lg leading-7">Terms and conditions</Link>
                 </div>

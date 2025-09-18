@@ -34,9 +34,9 @@ export default function Nav() {
   return (
     <>
       {/* Fixed Header: Top Bar + Main Nav (top bar collapses on scroll) */}
-      <div className={`fixed top-0 left-0 right-0 z-[9999] w-full ${scrolled ? 'bg-white shadow-md' : 'bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/85 shadow-sm'} transition-[background-color,box-shadow] duration-300 ease-out`}> 
+      <div className={`fixed top-0 left-0 right-0 z-[9999] w-full ${scrolled ? 'bg-white shadow-md' : 'bg-white shadow-sm'} transition-[background-color,box-shadow] duration-300 ease-out`}> 
         {/* Collapsing Top Info Bar */}
-        <div className={`overflow-hidden border-b border-gray-100 transition-all duration-300 ${scrolled ? 'h-0 opacity-0' : 'h-10 opacity-100'} bg-[#DB5554]/90`}>
+        <div className={`overflow-hidden border-b border-gray-100 transition-all duration-300 ${scrolled ? 'h-0 opacity-0' : 'h-10 opacity-100'} bg-[#DB5554]`}>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex h-10 items-center justify-center sm:justify-end gap-2 sm:gap-4 lg:gap-8 text-xs sm:text-sm text-white">
               <a href="tel:07984773570" className="inline-flex items-center gap-1 sm:gap-2 hover:text-gray-200">
@@ -105,6 +105,7 @@ export default function Nav() {
                 <div className="py-2">
                   <Link href="/services/rics" className="block px-4 py-2 text-sm text-[#DB5554] hover:bg-gray-50">RICS Surveys</Link>
                   <Link href="/services/roof" className="block px-4 py-2 text-sm text-[#DB5554] hover:bg-gray-50">Roof Surveys</Link>
+                  <a href="https://www.sklpropertyfinders.co.uk/" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-sm text-[#DB5554] hover:bg-gray-50">Property Finding</a>
                 </div>
               </div>
             </div>
@@ -213,7 +214,7 @@ export default function Nav() {
                     <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z" clipRule="evenodd" />
                   </svg>
                 </button>
-                <div className={`overflow-hidden transition-all duration-200 ${mobileDropdowns.services ? 'max-h-32 opacity-100' : 'max-h-0 opacity-0'}`}>
+                <div className={`overflow-hidden transition-all duration-200 ${mobileDropdowns.services ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
                   <div className="pl-4 space-y-2">
                     <Link 
                       href="/services/rics" 
@@ -229,6 +230,15 @@ export default function Nav() {
                     >
                       Roof Surveys
                     </Link>
+                    <a 
+                      href="https://www.sklpropertyfinders.co.uk/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="block text-base text-[#DB5554] hover:opacity-80 transition-opacity"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Property Finding
+                    </a>
                   </div>
                 </div>
               </div>

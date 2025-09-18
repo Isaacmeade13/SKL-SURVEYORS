@@ -59,7 +59,7 @@ export default function AboutPage() {
               }`}
             >
               <div className="relative w-[260px] h-[260px] sm:w-[300px] sm:h-[300px] rounded-lg overflow-hidden ring-1 ring-gray-200">
-                <Image src="/images/placeholder.svg" alt="Marc Glastonbury" fill className="object-cover" />
+                <Image src="/images/marc.png" alt="Marc Glastonbury" fill className="object-cover" />
               </div>
             </div>
 
@@ -109,7 +109,7 @@ export default function AboutPage() {
       {/* Secondary CTA Section (above Footer) */}
       <section className="relative w-full">
         <div className="relative h-[40svh] min-h-[320px] w-full">
-          <Image src="/images/placeholder.svg" alt="CTA background" fill className="object-cover" />
+          <Image src="/images/landscape-images/roof.png" alt="CTA background" fill className="object-cover" />
           <div className="absolute inset-0 bg-black/50" />
 
           <div className="absolute inset-0">

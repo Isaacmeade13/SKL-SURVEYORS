@@ -1,5 +1,6 @@
 "use client";
 import { useState } from 'react';
+import { supabase } from '@/lib/supabase';
 
 interface FormData {
   name: string;
@@ -34,17 +35,46 @@ export default function ContactForm() {
     setSubmitStatus('idle');
 
     try {
-      // Simulate form submission - replace with actual API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        service: '',
-        message: ''
-      });
+      console.log('📧 Submitting contact form...');
+      
+      // Get additional metadata
+      const ipAddress = await fetch('https://api.ipify.org?format=json')
+        .then(res => res.json())
+        .then(data => data.ip)
+        .catch(() => null);
+
+      const { data, error } = await supabase
+        .from('skl_contact_submissions')
+        .insert([
+          {
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            service: formData.service,
+            message: formData.message,
+            status: 'new',
+            ip_address: ipAddress,
+            user_agent: navigator.userAgent,
+            referrer_url: document.referrer || null
+          }
+        ]);
+
+      if (error) {
+        console.error('❌ Error submitting contact form:', error);
+        setSubmitStatus('error');
+      } else {
+        console.log('✅ Contact form submitted successfully:', data);
+        setSubmitStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          service: '',
+          message: ''
+        });
+      }
     } catch (error) {
+      console.error('💥 Exception submitting contact form:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);

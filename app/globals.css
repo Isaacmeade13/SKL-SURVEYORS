@@ -37,8 +37,17 @@ body {
   overscroll-behavior: contain;
 }
 
-/* Overscroll background color */
+/* Overscroll background color and smooth scrolling */
 html {
   background-color: #191919;
+  scroll-behavior: smooth;
+}
+
+/* Line clamp utility for testimonials */
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
