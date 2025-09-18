@@ -11,8 +11,7 @@ export default function TestimonialsPageClient() {
     email: '',
     rating: 5,
     location: '',
-    message: '',
-    agreeToFeature: false
+    message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -64,8 +63,7 @@ export default function TestimonialsPageClient() {
           email: '',
           rating: 5,
           location: '',
-          message: '',
-          agreeToFeature: false
+          message: ''
         });
         // Refresh testimonials list
         fetchTestimonials();
@@ -386,16 +384,6 @@ export default function TestimonialsPageClient() {
                       </>
                     )}
                   </button>
-                  {!showAll && allTestimonials.length > 15 && (
-                    <div className="mt-2">
-                      <button 
-                        onClick={() => setDisplayedTestimonials(randomizeAndLimitTestimonials(allTestimonials, 15))}
-                        className="text-sm text-[#DB5554] hover:text-[#B84443] transition-colors duration-200"
-                      >
-                        🔄 Get New Random Selection
-                      </button>
-                    </div>
-                  )}
                 </div>
               </>
             ) : (
@@ -515,19 +503,10 @@ export default function TestimonialsPageClient() {
                 />
               </div>
 
-              <div>
-                <label className="flex items-start space-x-3">
-                  <input
-                    type="checkbox"
-                    required
-                    checked={testimonialForm.agreeToFeature}
-                    onChange={(e) => setTestimonialForm(prev => ({ ...prev, agreeToFeature: e.target.checked }))}
-                    className="mt-1 h-4 w-4 text-[#DB5554] focus:ring-[#DB5554] border-gray-300 rounded"
-                  />
-                  <span className="text-sm text-gray-700">
-                    I agree to have my testimonial featured on the SKL Surveyors website. *
-                  </span>
-                </label>
+              <div className="text-center">
+                <p className="text-sm text-gray-600">
+                  By submitting this form, you agree to have your testimonial featured on the SKL Surveyors website.
+                </p>
               </div>
 
               <div className="text-center">

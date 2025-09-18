@@ -1,6 +1,5 @@
 "use client";
 import Link from 'next/link';
-import Image from 'next/image';
 import { useState } from 'react';
 
 export default function Footer() {
@@ -39,6 +38,17 @@ export default function Footer() {
                   <p className="text-white text-base sm:text-lg leading-7">07984 773570</p>
                 </div>
                 <div>
+                  <p className="text-gray-400 text-sm">Email:</p>
+                  <div className="space-y-1">
+                    <a href="mailto:info@sklsurveyors.co.uk" className="block text-white text-base sm:text-lg leading-7 hover:text-[#DB5554] transition-colors">
+                      info@sklsurveyors.co.uk
+                    </a>
+                    <a href="mailto:marcglastonbury@live.co.uk" className="block text-white text-base sm:text-lg leading-7 hover:text-[#DB5554] transition-colors">
+                      marcglastonbury@live.co.uk
+                    </a>
+                  </div>
+                </div>
+                <div>
                   <p className="text-gray-400 text-base sm:text-lg leading-7">We are open:</p>
                   <p className="text-white text-base sm:text-lg leading-7">Mon - Fri: 8 AM - 6 PM</p>
                 </div>
@@ -67,8 +77,8 @@ export default function Footer() {
             </button>
             <div className={`overflow-hidden transition-all duration-300 ${openDropdowns.accreditations ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
               <div className="pb-4 space-y-3">
-                <div className="relative h-12 w-40">
-                  <Image src="/svg/ricss.svg" alt="RICS accreditation" fill className="object-contain object-left" />
+                <div className="h-12 w-40">
+                  <img src="/svg/ricss.svg" alt="RICS accreditation" className="h-full w-full object-contain object-left" />
                 </div>
                 <p className="text-gray-300 text-base sm:text-lg leading-7">
                   Accredited by the Royal Institute of Chartered Surveyors (RICS) and a member of the
@@ -116,8 +126,8 @@ export default function Footer() {
         <div className="hidden md:grid grid-cols-3 gap-8 items-start">
           {/* Left: Logo */}
           <div className="flex flex-col items-start">
-            <div className="relative h-20 w-20 sm:h-24 sm:w-24 md:h-28 md:w-28 lg:h-32 lg:w-32">
-              <Image src="/svg/white.svg" alt="SKL Surveyors logo" fill className="object-contain" />
+            <div className="h-20 w-20 sm:h-24 sm:w-24 md:h-28 md:w-28 lg:h-32 lg:w-32">
+              <img src="/svg/white.svg" alt="SKL Surveyors logo" className="h-full w-full object-contain" />
             </div>
           </div>
 
@@ -130,8 +140,8 @@ export default function Footer() {
               property surveys you can rely on.
             </p>
             <div className="pt-6">
-              <div className="relative h-12 sm:h-14 lg:h-16 w-40 sm:w-48 lg:w-56">
-                <Image src="/svg/ricss.svg" alt="RICS accreditation" fill className="object-contain object-left" />
+              <div className="h-12 sm:h-14 lg:h-16 w-40 sm:w-48 lg:w-56">
+                <img src="/svg/ricss.svg" alt="RICS accreditation" className="h-full w-full object-contain object-left" />
               </div>
             </div>
           </div>
@@ -143,6 +153,17 @@ export default function Footer() {
               <div>
                 <p className="text-gray-400">Phone:</p>
                 <p className="mt-1 text-white text-base sm:text-lg leading-7">07984 773570</p>
+              </div>
+              <div>
+                <p className="text-gray-400">Email:</p>
+                <div className="mt-1 space-y-1">
+                  <a href="mailto:info@sklsurveyors.co.uk" className="block text-white text-base sm:text-lg leading-7 hover:text-[#DB5554] transition-colors">
+                    info@sklsurveyors.co.uk
+                  </a>
+                  <a href="mailto:marcglastonbury@live.co.uk" className="block text-white text-base sm:text-lg leading-7 hover:text-[#DB5554] transition-colors">
+                    marcglastonbury@live.co.uk
+                  </a>
+                </div>
               </div>
               <div>
                 <p className="text-gray-400 text-base sm:text-lg leading-7">We are open:</p>

@@ -97,11 +97,18 @@ export default function ContactPageClient() {
                   </div>
                   <div>
                     <h3 className="text-base font-semibold text-gray-900 mb-1">Email</h3>
-                    <p className="text-gray-600 text-sm sm:text-base leading-6">
-                      <a href="mailto:info@sklsurveyors.co.uk" className="hover:text-[#DB5554] transition-colors">
-                        info@sklsurveyors.co.uk
-                      </a>
-                    </p>
+                    <div className="space-y-1">
+                      <p className="text-gray-600 text-sm sm:text-base leading-6">
+                        <a href="mailto:info@sklsurveyors.co.uk" className="hover:text-[#DB5554] transition-colors">
+                          info@sklsurveyors.co.uk
+                        </a>
+                      </p>
+                      <p className="text-gray-600 text-sm sm:text-base leading-6">
+                        <a href="mailto:marcglastonbury@live.co.uk" className="hover:text-[#DB5554] transition-colors">
+                          marcglastonbury@live.co.uk
+                        </a>
+                      </p>
+                    </div>
                   </div>
                 </div>
 

@@ -52,7 +52,7 @@ export default function Nav() {
               <div className="inline-flex items-center gap-1 sm:gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-3 w-3 sm:h-4 sm:w-4"><path fillRule="evenodd" d="M12 2.25a9.75 9.75 0 100 19.5 9.75 9.75 0 000-19.5zM12.75 6a.75.75 0 00-1.5 0v6c0 .199.079.39.22.53l3.75 3.75a.75.75 0 101.06-1.06l-3.53-3.53V6z" clipRule="evenodd"/></svg>
                 <span className="hidden sm:inline">Monday – Friday 8 AM – 6 PM</span>
-                <span className="sm:hidden">8-6</span>
+                <span className="sm:hidden">Mon-Fri 8-6</span>
               </div>
             </div>
           </div>
