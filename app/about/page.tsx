@@ -109,7 +109,7 @@ export default function AboutPage() {
       {/* Secondary CTA Section (above Footer) */}
       <section className="relative w-full">
         <div className="relative h-[40svh] min-h-[320px] w-full">
-          <Image src="/images/landscape-images/roof.png" alt="CTA background" fill className="object-cover" />
+          <Image src="/images/Landscape-images/roof.png" alt="CTA background" fill className="object-cover" />
           <div className="absolute inset-0 bg-black/50" />
 
           <div className="absolute inset-0">

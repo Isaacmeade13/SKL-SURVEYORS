@@ -51,7 +51,7 @@ export default function HomePageClient() {
         <div className="relative h-[calc(50svh-5rem)] min-h-[300px] sm:h-[calc(65svh-5rem)] sm:min-h-[480px] w-full">
           {/* Slide 1 */}
           <Image 
-            src="/images/landscape-images/slide1.png" 
+            src="/images/Landscape-images/slide1.png" 
             alt="Professional property surveying services" 
             fill 
             priority 
@@ -61,7 +61,7 @@ export default function HomePageClient() {
           />
           {/* Slide 2 */}
           <Image 
-            src="/images/landscape-images/slide2.png" 
+            src="/images/Landscape-images/slide2.png" 
             alt="Professional property surveying services" 
             fill 
             className={`object-cover transition-opacity duration-1000 ease-in-out ${
@@ -70,7 +70,7 @@ export default function HomePageClient() {
           />
           {/* Slide 3 */}
           <Image 
-            src="/images/landscape-images/slide3.png" 
+            src="/images/Landscape-images/slide3.png" 
             alt="Professional property surveying services" 
             fill 
             className={`object-cover transition-opacity duration-1000 ease-in-out ${
@@ -280,7 +280,7 @@ export default function HomePageClient() {
       {/* Bottom CTA Image Section (after What We Do) */}
       <section className="relative w-full mt-0">
         <div className="relative h-[40svh] min-h-[300px] sm:h-[50svh] sm:min-h-[420px] w-full">
-          <Image src="/images/landscape-images/124.png" alt="CTA background" fill className="object-cover" />
+          <Image src="/images/Landscape-images/124.png" alt="CTA background" fill className="object-cover" />
           <div className="absolute inset-0 bg-black/50" />
 
           <div className="absolute inset-0">
