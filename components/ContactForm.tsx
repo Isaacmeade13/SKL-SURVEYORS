@@ -64,6 +64,22 @@ export default function ContactForm() {
         setSubmitStatus('error');
       } else {
         console.log('✅ Contact form submitted successfully:', data);
+        
+        // Send email notification
+        try {
+          await fetch('/api/send-contact-notification', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+          });
+          console.log('📧 Email notification sent successfully');
+        } catch (emailError) {
+          console.error('❌ Error sending email notification:', emailError);
+          // Don't fail the form submission if email fails
+        }
+        
         setSubmitStatus('success');
         setFormData({
           name: '',

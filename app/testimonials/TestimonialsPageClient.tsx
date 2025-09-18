@@ -58,6 +58,22 @@ export default function TestimonialsPageClient() {
         setSubmitStatus('error');
       } else {
         setSubmitStatus('success');
+        
+        // Send email notification
+        try {
+          await fetch('/api/send-testimonial-notification', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(testimonialForm),
+          });
+          console.log('📧 Testimonial email notification sent successfully');
+        } catch (emailError) {
+          console.error('❌ Error sending testimonial email notification:', emailError);
+          // Don't fail the testimonial submission if email fails
+        }
+        
         setTestimonialForm({
           name: '',
           email: '',
